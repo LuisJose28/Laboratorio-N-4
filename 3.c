@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+/* Programa: VuelosInternacionales.c */
+/*
+Análisis del problema: 
+Entrada: Ingresar la moneda a la que se desea convertir y la cantidad.
+Proceso: Calcular la equivalencia de la moneda en dólares 
+Salida: El sistema le indicara la cantidad en dólares. 
+*/
+
 float CambioMoneda(int valorUno, float valorDos)
 {
         float resultado;
@@ -58,19 +66,20 @@ float CambioMoneda(int valorUno, float valorDos)
                 printf("\n-No ha digitado una moneda correcta, Vuelva a intentarlo.\n");  
 
         }
-        return resultado; // esta variable retorna el resultado a la funcion principal 
+        return resultado; // esta variable retorna el resultado a la función principal 
 
 }
-
 int main()
 {
     //bloque declarativa de variables
     int moneda; //tipo de moned a a cambiar 
-    int contador; //esta variable servira para terminar o repetir el programa
     float cantidad; //cantidad de moneda que se desea cambiar a dolar 
+    int luisEspinosa; //esta variable servira para terminar o repetir el programa
   
     //Bloque de Instrucciones
+    
     printf("\n- Bienvenidos al Conversor de Divisas -\n");
+    printf("\n-Programa hecho por: Luis Espinosa / 8-992-2338\n-Salon: ISF-111\n");
 
     do
     {
@@ -83,10 +92,10 @@ int main()
 
         printf("\n¿Desea realizar otro cambio de moneda?\n");
         printf("Presione 1 para SI\nPresione 2 para NO\nOpcion:");        
-        scanf("%i", &contador); //esta variable servira para terminar o repetir el programa
+        scanf("%i", &luisEspinosa); //esta linea servira para terminar o repetir el programa. 0 para no. 1 para Si.
 
 
-    } while (contador != 0);
+    } while (luisEspinosa != 0);
     printf("\n-Hasta Luego\n");
 
     
