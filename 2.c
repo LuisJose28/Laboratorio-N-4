@@ -31,7 +31,6 @@ int Division(int numeroUno, int numeroDos)
 
 int main()
 {
-
     //bloque declarativa de variables
     int valorUno, valorDos; // el usuario ingresara 2 valores que desee
     int resultado; //esta variable sera el resultado de la operacion seleccionada
@@ -42,7 +41,6 @@ int main()
     //Bloque de Instrucciones
     printf("\n- Calculadora AnkerField -\n");
     
-
     do
     {
         printf("\n-Ingrese el primer valor numerico: ");
