@@ -1,7 +1,13 @@
 #include <stdio.h>
 
 /* Programa: CalculoSalarioNeto.c */
-/* Luis Espinosa / 8-992-2338 */
+/*
+Análisis del problema: 
+Entrada: Salario bruto del usuario.
+Proceso: Calcular sus prestaciones laborales dependiendo de su salario bruto.
+Salida: Salario Neto.
+*/
+
 float PrestacionesLaborales(float parametro) //funcion que calcula la prestacion laboral dependiendo del salario bruto
 {
         float total;
@@ -21,14 +27,17 @@ int main()
 
     //bloque declarativa de variables
     float salarioBruto; //Salario total sin ningun descuento
-    float salarioNeto; 
-    int contador; // esta variable servira para terminar o repetir el programa
+    float salarioNeto; // salario que recibira el usuario
+    int luisEspinosa; // esta variable servira para terminar o repetir el programa
     
 
     //Bloque de Instrucciones
+    
     printf("\n- Bienvenidos a la empresa AnkerField -\n");
-    printf("\n- Calcule su Salario Neto -\n");
-    printf("Si desea terminar, al final presione 0.\n");
+    printf("\n-Programa hecho por: Luis Espinosa / 8-992-2338\n-Salon: ISF-111\n");
+
+
+    printf("\n-Calcule su Salario Neto -\n");
 
     do
     {
@@ -37,14 +46,14 @@ int main()
 
         printf("-Su descuento por prestaciones laborales sera de: %.2f$ ", PrestacionesLaborales(salarioBruto));
         
-        salarioNeto = salarioBruto - PrestacionesLaborales (salarioBruto);
+        salarioNeto = salarioBruto - PrestacionesLaborales (salarioBruto); //Se calcula el salario Neto
         printf("\n-Su salario Neto será de %.2f$", salarioNeto);
 
-        printf("\n\n-¿Desea realizar otro calculo?. Si desea terminar, presione 0: ");
-        scanf("%i", &contador); //esta variable servira para terminar o repetir el programa
+        printf("\n\n-¿Desea realizar otro calculo?. Presione 1 para Si o 0 para No : ");
+        scanf("%i", &luisEspinosa); //esta linea servira para terminar o repetir el programa. 0 para no. 1 para Si
 
-    } while (contador != 0);
-    printf("\n-Hasta Luego\n");
+    } while (luisEspinosa != 0);
+    printf("-Hasta Luego\n");
 
 return 0;
 }
