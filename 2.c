@@ -1,32 +1,37 @@
 #include <stdio.h>
 
 /* Programa: Calculadora.c */
-/* Luis Espinosa / 8-992-2338 */
+/*
+Análisis del problema: 
+Entrada: Dos (2) valores númericos.
+Proceso: Cálculo de los dos (2) valores ingresados, dependiendo de la operación matemática escogida.
+Salida: Resultado de la operación matemática seleccionada.
+*/
 
 int Suma(int numeroUno, int numeroDos)
 {
     int total; 
     total = numeroUno + numeroDos;
-    return total; // esta variable devolvera el resultado de la suma a la funcion principal
+    return total; // esta variable devolvera el resultado de la suma a la función principal
 }
 
 int Resta(int numeroUno, int numeroDos)
 {
     int total; 
     total = numeroUno - numeroDos;
-    return total; // esta variable devolvera el resultado de la resta a la funcion principal
+    return total; // esta variable devolvera el resultado de la resta a la función principal
 }
 int Multiplicacion(int numeroUno, int numeroDos)
 {
     int total; 
     total = numeroUno * numeroDos;
-    return total; // esta variable devolvera el resultado de la multiplicacion a la funcion principal
+    return total; // esta variable devolvera el resultado de la multiplicacion a la función principal
 }
 int Division(int numeroUno, int numeroDos)
 {
     int total; 
     total = numeroUno / numeroDos;
-    return total; // esta variable devolvera el resultado de la division a la funcion principal
+    return total; // esta variable devolvera el resultado de la division a la función principal
 }
 
 int main()
@@ -35,12 +40,13 @@ int main()
     int valorUno, valorDos; // el usuario ingresara 2 valores que desee
     int resultado; //esta variable sera el resultado de la operacion seleccionada
     int operacion; // esta variable decidira que operacion matematica realizará e inicializara la condicion switch-case
-    int contador; //esta variable servira para terminar o repetir el programa
+    int luisEspinosa; //esta variable servira para terminar o repetir el programa
     
 
     //Bloque de Instrucciones
     printf("\n- Calculadora AnkerField -\n");
-    
+    printf("\n-Programa hecho por: Luis Espinosa / 8-992-2338\n-Salon: ISF-111\n");
+
     do
     {
         printf("\n-Ingrese el primer valor numerico: ");
@@ -82,10 +88,10 @@ int main()
             break;
         }
         
-        printf("\n\n-¿Desea realizar otro calculo?. Si desea terminar, presione 0: ");
-        scanf("%i", &contador); //esta variable servira para terminar o repetir el programa
+        printf("\n\n-¿Desea realizar otro calculo?. Presione 1 para Si o 0 para No : ");
+        scanf("%i", &luisEspinosa); //esta linea servira para terminar o repetir el programa. 0 para no. 1 para Si.
 
-    } while (contador != 0);
+    } while (luisEspinosa != 0);
     printf("Hasta Luego\n");
 
 return 0;
