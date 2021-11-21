@@ -1,59 +1,41 @@
 #include <stdio.h>
-
-/* Programa: CalculoSalarioNeto.c */
+/* Programa: PrecioDeProductos.c */
 /*
 Análisis del problema: 
-Entrada: Salario bruto del usuario.
-Proceso: Calcular sus prestaciones laborales dependiendo de su salario bruto.
-Salida: Salario Neto.
+Entrada: Se almacenan 10(diez) productos.
+Proceso: Se acumula la cantidad de productos con un costo mayor a 50.
+Salida: Se imprime el porcentaje de los costos mayores a 50.
 */
 
-float PrestacionesLaborales(float parametro) //funcion que calcula la prestacion laboral dependiendo del salario bruto
-{
-        float total;
-        if(parametro <= 1000)
-        {
-            total = parametro * 0.11;
-        }
-        else if(parametro > 1000)
-        {
-            total = parametro * 0.1225;
-        }
-        return total; // retorna el resultado a la funcion principal 
-}
+int main(){
 
-int main()
-{
+    float producto[10];
+    float luisEspinosa;//variable donde se guardara el calculo para sacar el porcentaje
+    int i;//contador
+    int mayor50 = 0;// esta variable se utilizara para contar los productos superiores a 50
 
-    //bloque declarativa de variables
-    float salarioBruto; //Salario total sin ningun descuento
-    float salarioNeto; // salario que recibira el usuario
-    int luisEspinosa; // esta variable servira para terminar o repetir el programa
-    
 
-    //Bloque de Instrucciones
-    
-    printf("\n- Bienvenidos a la empresa AnkerField -\n");
+    printf("\n* Precio de los Productos *\n");
     printf("\n-Programa hecho por: Luis Espinosa / 8-992-2338\n-Salon: ISF-111\n");
+    printf("\n-A continuacion agregue el precio de los productos: \n");
 
-
-    printf("\n-Calcule su Salario Neto -\n");
-
-    do
+    for (i = 0; i <= 9; i++)
     {
-        printf("\n-A continuacion ingrese su Salario Bruto: ");
-        scanf("%f" , &salarioBruto);
+        printf("Producto N°%i: ", i+1);
+        scanf("%f", &producto[i]);
+    }
 
-        printf("-Su descuento por prestaciones laborales sera de: %.2f$ ", PrestacionesLaborales(salarioBruto));
-        
-        salarioNeto = salarioBruto - PrestacionesLaborales (salarioBruto); //Se calcula el salario Neto
-        printf("\n-Su salario Neto será de %.2f$", salarioNeto);
+    for (i = 0; i <= 9; i++)
+    {
+        if (producto[i] > 50)
+        {
+            mayor50++;//se almacenan los productos mayores a 50
+        }
+    }
+    luisEspinosa = ((float)mayor50 / 10) * 100;//formula aritmetica para sacar el porcentaje
+    
+    printf("\n* Porcentaje de los productos mayores a 50$ *\n");
+    printf("\n-El porcentaje fue de: %.2f%%\n", luisEspinosa);    
 
-        printf("\n\n-¿Desea realizar otro calculo?. Presione 1 para Si o 0 para No : ");
-        scanf("%i", &luisEspinosa); //esta linea servira para terminar o repetir el programa. 0 para no. 1 para Si
-
-    } while (luisEspinosa != 0);
-    printf("-Hasta Luego\n");
-
-return 0;
+    return 0;
 }
